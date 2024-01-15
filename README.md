@@ -16,11 +16,14 @@ Before you begin, ensure you have the following installed on your machine:
    ```bash
    git clone https://github.com/RocktimSharma/star_wars_app.git
 2. Navigate to the project directory
+   
    ```bash
    cd star_wars_app
-3. Install dependencies
+4. Install dependencies
+   
    ```bash
    npm install
 4 To run the application in development mode, use the following command:
-  ```bash
+
+   ```bash
    npm run dev

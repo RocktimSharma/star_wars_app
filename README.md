@@ -23,4 +23,4 @@ Before you begin, ensure you have the following installed on your machine:
    npm install
 4 To run the application in development mode, use the following command:
   ```bash
-  npm run dev
+   npm run dev

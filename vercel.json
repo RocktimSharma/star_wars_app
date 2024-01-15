@@ -1,8 +1,11 @@
 {
-    "routes":[
-        {
-            "src": "/[^.]+",
-            "dest": "/"
-        }
+    "version": 2,
+    "builds": [
+      {
+        "src": "main.jsx",
+        "use": "@vercel/static-build",
+        "config": { "maxLambdaSize": "2048mb" }
+      }
     ]
-}
+  }
+  

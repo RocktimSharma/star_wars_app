@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/main.jsx",
+        "src": ".",
         "use": "@vercel/static-build",
         "config": { "maxLambdaSize": "2048mb" }
       }

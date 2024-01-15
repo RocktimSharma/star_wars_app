@@ -71,10 +71,10 @@ export default function Layout() {
                 All Movies
               </NavLink>
               <NavLink
-                to="/favourites"
+                to="/favorites"
                 className="block mb-4 text-gray-400 hover:text-gray-300"
               >
-                Favourites
+                Favorites
               </NavLink>
             </div>
           </div>

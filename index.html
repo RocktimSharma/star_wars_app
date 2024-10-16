@@ -6,50 +6,53 @@
     <title>Star War Movies</title>
   </head>
   <body>
+
+    <div id="chatbot"></div>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/gh/PranabNewar/chatbot-cdn-demo@v1.5/index.js"
+      type="module"
+    ></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const chatbotContainer = document.getElementById("chatbot");
+    
+      // Create a new style element
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .custom-chatbot-container {
+          font-size:initial !important;
+        }
+    html{
+    font-size:initial !important;
+    }
+      `;
+      
+      // Append the style to the head
+      document.head.appendChild(style);
+    
+      // Add the custom class to the chatbotContainer
+      chatbotContainer.classList.add('custom-chatbot-container');
+    
+      const shadowRoot = chatbotContainer.attachShadow({ mode: 'open' });
+      const chatbotDiv = document.createElement('div');
+      shadowRoot.appendChild(chatbotDiv);
+    
+      if (window.Chatbot && window.Chatbot.mount) {
+        window.Chatbot.mount(chatbotDiv, { botId: "66f6a5dd3a83882c3d5566db" });
+      }
+    
+      // Inject Tailwind CSS into Shadow DOM
+      const styleLink = document.createElement('link');
+      styleLink.rel = 'stylesheet';
+      styleLink.href = "https://cdn.jsdelivr.net/gh/PranabNewar/chatbot-cdn-demo@v1.5/index2.css";
+      shadowRoot.appendChild(styleLink);
+    });
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <div id="chatbot"></div>
-<script
-  defer
-  src="https://cdn.jsdelivr.net/gh/PranabNewar/chatbot-cdn-demo@v1.5/index.js"
-  type="module"
-></script>
-<script defer>
-document.addEventListener("DOMContentLoaded", () => {
-  const chatbotContainer = document.getElementById("chatbot");
-
-  // Create a new style element
-  const style = document.createElement('style');
-  style.innerHTML = `
-    .custom-chatbot-container {
-      font-size:initial !important;
-    }
-html{
-font-size:initial !important;
-}
-  `;
-  
-  // Append the style to the head
-  document.head.appendChild(style);
-
-  // Add the custom class to the chatbotContainer
-  chatbotContainer.classList.add('custom-chatbot-container');
-
-  const shadowRoot = chatbotContainer.attachShadow({ mode: 'open' });
-  const chatbotDiv = document.createElement('div');
-  shadowRoot.appendChild(chatbotDiv);
-
-  if (window.Chatbot && window.Chatbot.mount) {
-    window.Chatbot.mount(chatbotDiv, { botId: "66f6a5dd3a83882c3d5566db" });
-  }
-
-  // Inject Tailwind CSS into Shadow DOM
-  const styleLink = document.createElement('link');
-  styleLink.rel = 'stylesheet';
-  styleLink.href = "https://cdn.jsdelivr.net/gh/PranabNewar/chatbot-cdn-demo@v1.5/index2.css";
-  shadowRoot.appendChild(styleLink);
-});
-</script>
+   
 
   </body>
 </html>
